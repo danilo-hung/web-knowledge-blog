@@ -60,14 +60,14 @@ to configures the Next.js build process and your editor to know where to look fo
 ---
 Add the `.contentlayer` directory into your `.gitignore` file to ensure each build of your app will have the latest generated data and you do not run into issues with Git.
 Also add `.contentlayer` into `.prettierignore` file to ignore the format of the generated data.
-```json
+```
 # ...
 
 # Contentlayer
 .contentlayer
 ```
 Add the `.contentlayer` and `contentLayerAdapter.js` to ignore the gereated data and the error of contentLayerAdapter.js
-```json
+```
 # Contentlayer
 .contentlayer
 
@@ -78,6 +78,7 @@ contentlayer.config.ts
 
 ## 2. Define Content Schema
 ### create `contentlayer.config.ts` to define the document type, directory, and field
+---
 ```ts
 import { defineDocumentType, makeSource } from './src/lib/contentLayerAdapter';
 
@@ -118,6 +119,7 @@ export default makeSource({
 });
 ```
 ### add an example post (ex: `20240517-markdown-demo.md` ) under `/content/posts` 
+---
 ```md
 ---
 title: Markdown demo
@@ -132,8 +134,10 @@ type: Post
 ### H3 title
 
 Some content with [link](https://www.google.com)
+```
 
-### run `pnpm dev` and check in terminal if the post is generated
+### Run `pnpm dev` and check in terminal if the post is generated
+---
 ```bash 
 pnpm dev
 ```
