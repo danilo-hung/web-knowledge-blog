@@ -34,3 +34,11 @@ yarn-error.log*
 # typescript
 *.tsbuildinfo
 next-env.d.ts
+
+# ...
+# Contentlayer
+.contentlayer
+
+# Ignore contentlayer eslint errors
+contentLayerAdapter.js
+contentlayer.config.ts
